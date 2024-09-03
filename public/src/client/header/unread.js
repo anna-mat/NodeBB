@@ -12,6 +12,7 @@ define('forum/header/unread', ['hooks'], function (hooks) {
 		const unreadTopics = app.user.unreadData;
 		// ChatGPT: used ChatGPT to understand SonarCloud issue and got information on how to debug.
 		function onNewPost(data) {
+			console.log('Anna Mathews');
 			if (!isValidPostData(data)) return;
 			const post = data.posts[0];
 			const tid = post.topic.tid;
@@ -20,7 +21,6 @@ define('forum/header/unread', ['hooks'], function (hooks) {
 			forNewTopic(post, tid);
 			forUnrepliedTopic(post, tid);
 			forReadTopic(post, tid);
-			console.log('Anna Mathews');
 		}
 		function isValidPostData(data) {
 			return data && data.posts && data.posts.length && unreadTopics;
