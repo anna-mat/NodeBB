@@ -20,7 +20,7 @@ define('forum/header/unread', ['hooks'], function (hooks) {
 			forNewTopic(post, tid);
 			forUnrepliedTopic(post, tid);
 			forReadTopic(post, tid);
-			console.log('it worked!');
+			console.log('Anna Mathews');
 		}
 		function isValidPostData(data) {
 			return data && data.posts && data.posts.length && unreadTopics;
